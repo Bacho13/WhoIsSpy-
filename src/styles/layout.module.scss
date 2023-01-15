@@ -1,0 +1,18 @@
+$background-collor: #1a2a33;
+$light-background-collor: #1f3641;
+$yello-collor: #f2b137;
+$click-yello-collor: #ffc860;
+$blue-collor: #31c3bd;
+$click-blue-collor: #65e9e4;
+$dark-text-collor: #1a2a33;
+$white-text-collor: #ffffff;
+
+.body {
+  background-color: $background-collor;
+  display: flex;
+  justify-content: center;
+}
+.phoneShape {
+  background-color: $light-background-collor;
+  width: 375px;
+}
