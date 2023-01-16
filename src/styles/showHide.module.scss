@@ -1,0 +1,120 @@
+$background-collor: #1a2a33;
+$light-background-collor: #1f3641;
+$yello-collor: #f2b137;
+$red-collor: #ff6961;
+$click-yello-collor: #ffc860;
+$yellow-button-shadow: #cc8b13;
+$red-button-shadow: #ba0f30;
+$blue-collor: #31c3bd;
+$click-blue-collor: #65e9e4;
+$click-red-collor: #db1f48;
+$dark-text-collor: #1a2a33;
+$white-text-collor: #ffffff;
+$blue-button-shadow: #118c87;
+
+.main {
+  height: 100vh;
+  width: 329px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backIconCont {
+  width: 329px;
+  margin-top: 20px;
+  display: flex;
+  height: 30px;
+}
+
+.contentContainer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30vh;
+}
+
+.cardImage {
+  border-radius: 23px;
+}
+.name {
+  width: 95px;
+  height: 44px;
+
+  font-family: "BPG ExtraSquare Mtavruli";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 1.25px;
+
+  color: #f2b137;
+}
+
+.flipCard {
+  background-color: transparent;
+  width: 329px;
+  height: 200px;
+  perspective: 1000px;
+  border-radius: 23px;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 23px;
+}
+
+.flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 23px;
+}
+
+.flipCardFront {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipCardBack {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: "BPG ExtraSquare Mtavruli";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 25px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 1.25px;
+
+    /* Dark Navy */
+
+    color: #1a2a33;
+  }
+}

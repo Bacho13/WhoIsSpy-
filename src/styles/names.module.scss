@@ -1,0 +1,92 @@
+$background-collor: #1a2a33;
+$light-background-collor: #1f3641;
+$yello-collor: #f2b137;
+$click-yello-collor: #ffc860;
+$blue-collor: #31c3bd;
+$click-blue-collor: #65e9e4;
+$dark-text-collor: #1a2a33;
+$white-text-collor: #ffffff;
+
+.names {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+.inputContainer {
+  p {
+    font-family: "BPG Mrgvlovani Caps 2010";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 10px;
+    letter-spacing: 1.25px;
+
+    color: #ffffff;
+  }
+}
+.input {
+  box-sizing: border-box;
+  width: 286px;
+  height: 40px;
+  background: #1a2a33;
+  border: 1px solid #31c3bd;
+  border-radius: 8px;
+  color: $white-text-collor;
+
+  font-family: "BPG Mrgvlovani Caps 2010";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 1.25px;
+
+  color: #ffffff;
+}
+.showName {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+  .deletIcon {
+    color: $blue-collor;
+    cursor: pointer;
+  }
+}
+.input:focus {
+  border: 1px solid white;
+  outline: none;
+}
+.upper {
+  height: 70vh;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.backButtonContainer {
+  width: 288px;
+  height: 55px;
+  margin-top: 20px;
+  position: relative;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 30vh;
+  padding-bottom: 20px;
+}
+.error {
+  color: #ff6961;
+  font-family: "BPG Mrgvlovani Caps 2010";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  margin: 0 auto;
+  width: 250px;
+}

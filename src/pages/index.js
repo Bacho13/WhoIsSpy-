@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>ვინ არის ჯაშუში?</h1>
-        <Link>
+        <Link href="/names">
           <YellowButton text="თამაშის დაწყება" />
         </Link>
       </main>

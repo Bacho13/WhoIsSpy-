@@ -1,0 +1,19 @@
+.button {
+  right: 0;
+  width: 52px;
+  height: 52px;
+  background: #dbe8ed;
+  box-shadow: inset 0px -4px 0px #6b8997;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .buttonIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .a {
+    text-decoration: none;
+    color: black;
+  }
+}

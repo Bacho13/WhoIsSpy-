@@ -1,13 +1,16 @@
 $background-collor: #1a2a33;
 $light-background-collor: #1f3641;
 $yello-collor: #f2b137;
+$red-collor: #ff6961;
 $click-yello-collor: #ffc860;
 $yellow-button-shadow: #cc8b13;
+$red-button-shadow: #ba0f30;
 $blue-collor: #31c3bd;
 $click-blue-collor: #65e9e4;
+$click-red-collor: #db1f48;
 $dark-text-collor: #1a2a33;
 $white-text-collor: #ffffff;
-
+$blue-button-shadow: #118c87;
 .link {
   text-decoration: none;
 }
@@ -18,9 +21,8 @@ $white-text-collor: #ffffff;
   display: flex;
   justify-content: center;
   border-radius: 15px;
-  background-color: $yello-collor;
-  background: #f2b137;
-  box-shadow: inset 0px -8px 0px $yellow-button-shadow;
+  background-color: $red-collor;
+  box-shadow: inset 0px -8px 0px $red-button-shadow;
   border-radius: 15px;
   cursor: pointer;
   transition: box-shadow 0.5s;
@@ -38,6 +40,6 @@ $white-text-collor: #ffffff;
 }
 
 .button:hover {
-  box-shadow: inset 0px 0px 0px $yellow-button-shadow;
-  background-color: $click-yello-collor;
+  box-shadow: inset 0px 0px 0px $red-button-shadow;
+  background-color: $click-red-collor;
 }
