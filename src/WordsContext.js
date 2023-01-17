@@ -38,7 +38,7 @@ export const WordProvider = ({ children }) => {
     },
     {
       id: 1,
-      word: "ძუძუს თავი",
+      word: "ლიფტი",
     },
     {
       id: 1,

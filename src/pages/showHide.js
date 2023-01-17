@@ -6,34 +6,66 @@ import RedButton from "@/components/RedButton";
 import BackButton from "@/components/BackButton";
 import Link from "next/link";
 import { WordsContext } from "../WordsContext";
-
+import { useRouter } from "next/router";
 import { NameContext } from "../../src/NameContext";
-import { style } from "@mui/system";
 
 function showHide() {
   const [words, setWords] = useContext(WordsContext);
   const [persons, setPersons] = useContext(NameContext);
-  const [clickCounter, setCliclCoumter] = useState(0);
+  const [clickCounter, setClickCounter] = useState(0);
   const [isShown, setIsShown] = useState(false);
-  const [indexOfPlayerm, setIndexOfPlayerm] = useState(0);
+  const [indexOfPlayer, setIndexOfPlayer] = useState(0);
   const [clickedTimes, setClickedTimes] = useState(0);
+  const [randomNum, setRandomNum] = useState(0);
+  const [randomWordIndex, setRandomWordIndex] = useState(0);
+  const router = useRouter();
+
+  const getRandomNum = (max) => {
+    let rand = Math.floor(Math.random() * max);
+    setRandomNum(rand);
+  };
+
+  const randomIndexForWord = (max) => {
+    let rand = Math.floor(Math.random() * max);
+    setRandomWordIndex(rand);
+  };
+
+  useEffect(() => {
+    getRandomNum(persons.length);
+    randomIndexForWord(words.length);
+  }, []);
 
   const cardToggle = () => {
-    setIsShown(!isShown);
-    setClickedTimes((prev) => prev + 1);
+    if (clickedTimes == persons.length * 2 - 1) {
+      router.push("/");
+    } else {
+      setClickedTimes((prev) => prev + 1);
+      setIsShown(!isShown);
+    }
+    console.log(persons.length);
+    console.log(clickedTimes);
   };
 
   const choosePlayer = () => {
     let times = clickedTimes / 2; // 2 ზე იყოფა თუ არა რადგან ყოველი ეორე გვინდა
-    let player = 0;
     if (times % 1 == 0) {
-      setIndexOfPlayerm(times);
+      setIndexOfPlayer(times);
     }
   };
+
   useEffect(() => {
     choosePlayer();
-  }, [clickedTimes]);
-  console.log(persons);
+    ShowWordOrSpy();
+  }, [isShown]);
+
+  const ShowWordOrSpy = () => {
+    if (indexOfPlayer == randomNum) {
+      return <p>ჯაშუში</p>;
+    } else {
+      return <p>{words[randomWordIndex].word}</p>;
+    }
+  };
+
   return (
     <>
       <div className={styles.main}>
@@ -43,7 +75,7 @@ function showHide() {
           </Link>
         </div>
         <div className={styles.contentContainer}>
-          <p className={styles.name}>{persons[indexOfPlayerm].name}</p>
+          <p className={styles.name}>{persons[indexOfPlayer].name}</p>
 
           <div className={styles.card}>
             <div className={styles.flipCard}>
@@ -57,9 +89,7 @@ function showHide() {
                     alt="background of the card"
                   />
                 </div>
-                <div className={styles.flipCardBack}>
-                  <p>სიტყვა</p>
-                </div>
+                <div className={styles.flipCardBack}>{ShowWordOrSpy()}</div>
               </div>
             </div>
           </div>
