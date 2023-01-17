@@ -17,7 +17,7 @@ function ShowHide() {
   const [clickedTimes, setClickedTimes] = useState(0);
   const [randomNum, setRandomNum] = useState(0);
   const [randomWordIndex, setRandomWordIndex] = useState(0);
-  // const router = useRouter();
+  const router = useRouter();
 
   const getRandomNum = (max) => {
     let rand = Math.floor(Math.random() * max);
@@ -36,7 +36,7 @@ function ShowHide() {
 
   const cardToggle = () => {
     if (clickedTimes == persons.length * 2 - 1) {
-      // router.push("/askQuestion");
+      router.push("/askQuestion");
     } else {
       setClickedTimes((prev) => prev + 1);
       setIsShown(!isShown);
