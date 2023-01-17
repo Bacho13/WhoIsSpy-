@@ -3,7 +3,7 @@ import styles from "../styles/AskQuestions.module.scss";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import Link from "next/link";
 
-function askQuestion() {
+function AskQuestion() {
   //   const router = useRouter();
   return (
     <>

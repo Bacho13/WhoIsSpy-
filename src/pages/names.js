@@ -6,7 +6,7 @@ import { NameContext } from "../../src/NameContext";
 import BackButton from "@/components/BackButton";
 import BlueButton from "@/components/BlueButton";
 import Link from "next/link";
-function names() {
+function Names() {
   const [persons, setPersons] = useContext(NameContext);
   const [name, setName] = useState("");
 

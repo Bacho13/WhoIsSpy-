@@ -9,7 +9,7 @@ import { WordsContext } from "../WordsContext";
 import { useRouter } from "next/router";
 import { NameContext } from "../../src/NameContext";
 
-function showHide() {
+function ShowHide() {
   const [words, setWords] = useContext(WordsContext);
   const [persons, setPersons] = useContext(NameContext);
   const [clickCounter, setClickCounter] = useState(0);
