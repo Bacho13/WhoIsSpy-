@@ -26,7 +26,7 @@ export const WordProvider = ({ children }) => {
     },
     {
       id: 1,
-      word: "ჩრდილოეთ პოლუსი",
+      word: "გლდანი",
     },
     {
       id: 1,
