@@ -1,5 +1,5 @@
 import YellowButton from "@/components/YellowButton";
-import React, { UseContext, UseState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/names.module.scss";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { NameContext } from "../../src/NameContext";
@@ -7,8 +7,8 @@ import BackButton from "@/components/BackButton";
 import BlueButton from "@/components/BlueButton";
 import Link from "next/link";
 function names() {
-  const [persons, setPersons] = UseContext(NameContext);
-  const [name, setName] = UseState("");
+  const [persons, setPersons] = useContext(NameContext);
+  const [name, setName] = useState("");
 
   const updateName = (e) => {
     setName(e.target.value);

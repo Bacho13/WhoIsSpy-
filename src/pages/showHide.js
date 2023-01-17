@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { UseContext, UseEffect, UseState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "../styles/showHide.module.scss";
 import BlueButton from "@/components/BlueButton";
 import RedButton from "@/components/RedButton";
@@ -10,15 +10,15 @@ import { useRouter } from "next/router";
 import { NameContext } from "../../src/NameContext";
 
 function showHide() {
-  const [words, setWords] = UseContext(WordsContext);
-  const [persons, setPersons] = UseContext(NameContext);
-  const [clickCounter, setClickCounter] = UseState(0);
-  const [isShown, setIsShown] = UseState(false);
-  const [indexOfPlayer, setIndexOfPlayer] = UseState(0);
-  const [clickedTimes, setClickedTimes] = UseState(0);
-  const [randomNum, setRandomNum] = UseState(0);
-  const [randomWordIndex, setRandomWordIndex] = UseState(0);
-  const router = UseRouter();
+  const [words, setWords] = useContext(WordsContext);
+  const [persons, setPersons] = useContext(NameContext);
+  const [clickCounter, setClickCounter] = useState(0);
+  const [isShown, setIsShown] = useState(false);
+  const [indexOfPlayer, setIndexOfPlayer] = useState(0);
+  const [clickedTimes, setClickedTimes] = useState(0);
+  const [randomNum, setRandomNum] = useState(0);
+  const [randomWordIndex, setRandomWordIndex] = useState(0);
+  const router = useRouter();
 
   const getRandomNum = (max) => {
     let rand = Math.floor(Math.random() * max);
@@ -30,20 +30,18 @@ function showHide() {
     setRandomWordIndex(rand);
   };
 
-  UseEffect(() => {
+  useEffect(() => {
     getRandomNum(persons.length);
     randomIndexForWord(words.length);
   }, []);
 
   const cardToggle = () => {
     if (clickedTimes == persons.length * 2 - 1) {
-      router.push("/");
+      router.push("/askQuestion");
     } else {
       setClickedTimes((prev) => prev + 1);
       setIsShown(!isShown);
     }
-    console.log(persons.length);
-    console.log(clickedTimes);
   };
 
   const choosePlayer = () => {
@@ -53,10 +51,10 @@ function showHide() {
     }
   };
 
-  UseEffect(() => {
+  useEffect(() => {
     choosePlayer();
     ShowWordOrSpy();
-  }, [isShown]);
+  }, [isShown, clickedTimes]);
 
   const ShowWordOrSpy = () => {
     if (indexOfPlayer == randomNum) {
