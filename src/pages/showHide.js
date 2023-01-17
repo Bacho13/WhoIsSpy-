@@ -12,7 +12,6 @@ import { NameContext } from "../../src/NameContext";
 function ShowHide() {
   const [words, setWords] = useContext(WordsContext);
   const [persons, setPersons] = useContext(NameContext);
-  const [clickCounter, setClickCounter] = useState(0);
   const [isShown, setIsShown] = useState(false);
   const [indexOfPlayer, setIndexOfPlayer] = useState(0);
   const [clickedTimes, setClickedTimes] = useState(0);
