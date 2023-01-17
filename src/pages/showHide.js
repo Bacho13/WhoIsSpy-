@@ -62,6 +62,13 @@ function ShowHide() {
       return <p>{words[randomWordIndex].word}</p>;
     }
   };
+  const showName = (x) => {
+    if (persons.length > 0) {
+      return <p className={styles.name}>{x}</p>;
+    } else {
+      return <p className={styles.name}>მოთამაშე არ გვყავს</p>;
+    }
+  };
 
   return (
     <>
@@ -72,8 +79,7 @@ function ShowHide() {
           </Link>
         </div>
         <div className={styles.contentContainer}>
-          <p className={styles.name}>{persons[indexOfPlayer].name}</p>
-
+          <p className={styles.name}>{showName(persons[indexOfPlayer].name)}</p>
           <div className={styles.card}>
             <div className={styles.flipCard}>
               <div className={isShown && `${styles.flipCardInner}`}>
