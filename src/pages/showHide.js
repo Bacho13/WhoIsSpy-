@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
+import React, { UseContext, UseEffect, UseState } from "react";
 import styles from "../styles/showHide.module.scss";
 import BlueButton from "@/components/BlueButton";
 import RedButton from "@/components/RedButton";
@@ -10,15 +10,15 @@ import { useRouter } from "next/router";
 import { NameContext } from "../../src/NameContext";
 
 function showHide() {
-  const [words, setWords] = useContext(WordsContext);
-  const [persons, setPersons] = useContext(NameContext);
-  const [clickCounter, setClickCounter] = useState(0);
-  const [isShown, setIsShown] = useState(false);
-  const [indexOfPlayer, setIndexOfPlayer] = useState(0);
-  const [clickedTimes, setClickedTimes] = useState(0);
-  const [randomNum, setRandomNum] = useState(0);
-  const [randomWordIndex, setRandomWordIndex] = useState(0);
-  const router = useRouter();
+  const [words, setWords] = UseContext(WordsContext);
+  const [persons, setPersons] = UseContext(NameContext);
+  const [clickCounter, setClickCounter] = UseState(0);
+  const [isShown, setIsShown] = UseState(false);
+  const [indexOfPlayer, setIndexOfPlayer] = UseState(0);
+  const [clickedTimes, setClickedTimes] = UseState(0);
+  const [randomNum, setRandomNum] = UseState(0);
+  const [randomWordIndex, setRandomWordIndex] = UseState(0);
+  const router = UseRouter();
 
   const getRandomNum = (max) => {
     let rand = Math.floor(Math.random() * max);
@@ -30,7 +30,7 @@ function showHide() {
     setRandomWordIndex(rand);
   };
 
-  useEffect(() => {
+  UseEffect(() => {
     getRandomNum(persons.length);
     randomIndexForWord(words.length);
   }, []);
@@ -53,7 +53,7 @@ function showHide() {
     }
   };
 
-  useEffect(() => {
+  UseEffect(() => {
     choosePlayer();
     ShowWordOrSpy();
   }, [isShown]);
