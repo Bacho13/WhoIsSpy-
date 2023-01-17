@@ -102,4 +102,4 @@ function ShowHide() {
   );
 }
 
-export default showHide;
+export default ShowHide;

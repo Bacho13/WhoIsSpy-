@@ -19,4 +19,4 @@ function AskQuestion() {
   );
 }
 
-export default askQuestion;
+export default AskQuestion;

@@ -107,4 +107,4 @@ function Names() {
   );
 }
 
-export default names;
+export default Names;
