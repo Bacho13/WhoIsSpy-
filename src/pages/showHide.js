@@ -92,7 +92,15 @@ function ShowHide() {
                     alt="background of the card"
                   />
                 </div>
-                <div className={styles.flipCardBack}>{ShowWordOrSpy()}</div>
+                <div
+                  className={
+                    indexOfPlayer == randomNum
+                      ? `${styles.flipCardBackSpy}`
+                      : `${styles.flipCardBack}`
+                  }
+                >
+                  {ShowWordOrSpy()}
+                </div>
               </div>
             </div>
           </div>
