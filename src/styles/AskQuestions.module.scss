@@ -1,8 +1,11 @@
+$blue-collor: #31c3bd;
+$click-blue-collor: #65e9e4;
+
 .Main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   p {
     width: 227px;
@@ -17,10 +20,36 @@
     color: #f2b137;
     margin-bottom: 60px;
   }
+  a {
+    width: 100%;
+    height: 100%;
+  }
+}
+.iconCont {
+  width: 60px;
+  height: 62px;
+  position: relative;
 }
 
-.icon {
-  width: 150px;
-  height: 150px;
-  color: white;
+.customIcon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: $blue-collor;
+}
+.customIcon:hover {
+  color: $click-blue-collor;
+}
+.homeiconCont {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.homeIcon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: $blue-collor;
+  top: 20px;
+  margin: 0 auto;
 }
