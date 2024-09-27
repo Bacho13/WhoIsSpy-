@@ -1,23 +1,23 @@
 
 
-## თამაში ჯაშუში
+##Game: Who is the Spy
 
-პროექტი აწყობილია next.js ის საშუალებით.
+
+The project is built using Next.js<br>
+<br>
+In the game, we need to enter  least 3 and a maximum of 12 players.
 <br>
 <br>
-თამაშში უნდა შევიყვანოთ მინიმუმს 3 და მაქსიმუმ 12 მოთამაშის სახელი.
+Only one player will receive the "spy" role, Nobody will know who is spy.
 <br>
 <br>
-გუნდში მხოლოდ ერთს ერგება ჯაშუშობის ბედნიერება მაგრამ არ ეცოდინება სიტყვა.
+It is up to the other players to figure out who the spy is by asking questions, based on this lack of knowledge
 <br>
 <br>
-სწორედ ამ არ ცოდნით უნდა მოახერხონ სხვა მოთამაშეებმა კითხვების დასმით მისი გამოჭერა
+ The game proceeds to the next stage when all players see their cards.
 <br>
 <br>
- თამაში გადადის შემდეგ ეტაპზე როდესაც ყველა მოთამაშე ნახავს კარტს.
-<br>
-<br>
-ამდროს იწყებენ რიგრიგობით ერთმანეთისთვის კითხვის დასმას და პასუხით უნდა მოახერხო გარკვევა იმას თუ ვინ არის ჯაშუში.
+During this time, players take turns asking each other questions, and they must figure out who the spy is based on the answers.
 
 <br>
 <br>
@@ -30,6 +30,6 @@
 Live - https://who-is-spy.vercel.app/ 
 <br>
 <br>
-ასევე იხილავთ ჩემს პრთფოლიოში -
+Check in my protfolio -
 https://portfolio-web-six-phi.vercel.app/
 
